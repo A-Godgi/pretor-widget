@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/pretor-demo-1.js" defer></script>
+    <script src="js/pretor-demo-2.js" is-popup="true" defer></script>
+    <title>Pretor.AI Widget Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        main {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #444;
+        }
+        p {
+            color: #555;
+            font-size: 16px;
+        }
+        ol {
+            margin: 15px 0;
+            padding-left: 20px;
+            list-style-type: decimal;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #d14;
+        }
+        .center-text {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .code-block {
+            margin: 15px 0;
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .copy-button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .copy-button:hover {
+            background-color: #0056b3;
+        }
+        #pretor-widget {
+            margin-top: 20px;
+            width: 300px;
+            height: 400px;
+            background-color: #ddd;
+            text-align: center;
+            line-height: 400px;
+            border: 2px solid #ccc;
+        }
+        .instructions {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .instructions > div {
+            flex: 1;
+            min-width: 300px;
+        }
+        .center-block {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1>Демонстрація віджету Pretor.AI</h1>
+            <p class="center-text">Віджет можливо інтегрувати у двох варіантах:</p>
+            <p class="center-text">1. Віджет поміщається у виділений блок на сторінці <br/>2. Віджет відкривається у модальному вікні</p>
+    <div class="instructions">
+        <div>
+            <h2>Варіант з віджетом у блоці</h2>
+            <p>Щоб інтегрувати віджет Pretor.AI на ваш сайт, виконайте наступні кроки:</p>
+            <ul>
+                <li>Вставте наступний скрипт у ваш HTML-документ у секцію <code>&lt;head&gt;</code> або перед закриваючим тегом <code>&lt;/body&gt;</code>:</li>
+                <div class="code-block" id="script1">
+                    <code>&lt;script src="https://raw.githubusercontent.com/A-Godgi/pretor-widget/c55869a73a3b08666120a67671a1b69d58adfea0/pretor-widget-script.js" defer&gt;&lt;/script&gt;</code>
+                    <button class="copy-button" onclick="copyToClipboard('script1')">Копіювати</button>
+                </div>
+                <li>Створіть блок з <code>id="pretor-widget"</code> та вкажіть розміри блока, де ви хочете, щоб з'явився віджет. Наприклад, ви можете використовувати CSS, щоб встановити висоту і ширину:</li>
+                <div class="code-block" id="script2">
+                    <code>&lt;div id="pretor-widget" style="width: 300px; height: 400px;"&gt;&lt;/div&gt;</code>
+                    <button class="copy-button" onclick="copyToClipboard('script2')">Копіювати</button>
+                </div>
+            </ul>
+            <p>Ви побачите цей блок на сайті:</p>
+            <div class="center-block">
+                <div id="pretor-demo2"></div>
+            </div>
+        </div>
+        <div>
+            <h2>Варіант з віджетом у модальному вікні</h2>
+            <p>Щоб інтегрувати віджет Pretor.AI на ваш сайт, виконайте наступні кроки:</p>
+            <ul>
+                <li>Вставте наступний скрипт у ваш HTML-документ у секцію <code>&lt;head&gt;</code> або перед закриваючим тегом <code>&lt;/body&gt;</code>:</li>
+                <div class="code-block" id="script3">
+                    <code>&lt;script src="https://raw.githubusercontent.com/A-Godgi/pretor-widget/c55869a73a3b08666120a67671a1b69d58adfea0/pretor-widget-script.js" is-popup="true" defer &gt;&lt;/script&gt;</code>
+                    <button class="copy-button" onclick="copyToClipboard('script3')">Копіювати</button>
+                </div>
+                <li>Створіть блок з <code>id="pretor-widget"</code> де ви хочете, щоб з'явилася кнопка, при натисканні якої відкриється модальне вікно з віджетом.</li>
+                <div class="code-block" id="script4">
+                    <code>&lt;div id="pretor-widget" &gt;&lt;/div&gt;</code>
+                    <button class="copy-button" onclick="copyToClipboard('script4')">Копіювати</button>
+                </div>
+            </ul>
+            <p>Ви побачите цю кнопку на сайті:</p>
+            <div class="center-block">
+            <div id="pretor-demo1"></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function copyToClipboard(id) {
+        const codeBlock = document.getElementById(id).querySelector("code");
+        const range = document.createRange();
+        range.selectNode(codeBlock);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+    }
+</script>
+
+</body>
+</html>
