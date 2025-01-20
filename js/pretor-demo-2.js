@@ -33,7 +33,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 5% 20%;
         z-index: 9999;
         overflow: hidden;
       }
@@ -114,8 +113,8 @@
         };
 
         const iframe = document.createElement('iframe');
-        iframe.style.width = '100%';
-        iframe.style.height = '100%';
+        iframe.style.width = '90%';
+        iframe.style.height = '90%';
         iframe.style.border = 'none';
 
         popup.appendChild(closeButton);
@@ -142,15 +141,6 @@
             button.textContent = 'Отримати безкоштовну консультацію';
             button.onclick = createPopup;
             container.appendChild(button);
-        } else {
-            const iframe = document.createElement('iframe');
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-            iframe.style.border = 'none';
-
-            container.appendChild(iframe);
-
-            loadReactAppInIframe(iframe);
         }
     };
 
