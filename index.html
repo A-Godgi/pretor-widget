@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/pretor-demo-1.js" defer></script>
     <script src="js/pretor-demo-2.js" is-popup="true" defer></script>
+
+
     <title>Pretor.AI Widget Demo</title>
     <style>
         body {
@@ -76,15 +78,6 @@
         .copy-button:hover {
             background-color: #0056b3;
         }
-        #pretor-widget {
-            margin-top: 20px;
-            width: 300px;
-            height: 400px;
-            background-color: #ddd;
-            text-align: center;
-            line-height: 400px;
-            border: 2px solid #ccc;
-        }
         .instructions {
             display: flex;
             gap: 20px;
@@ -113,12 +106,12 @@
             <ul>
                 <li>Вставте наступний скрипт у ваш HTML-документ у секцію <code>&lt;head&gt;</code> або перед закриваючим тегом <code>&lt;/body&gt;</code>:</li>
                 <div class="code-block" id="script1">
-                    <code>&lt;script src="https://raw.githubusercontent.com/A-Godgi/pretor-widget/c55869a73a3b08666120a67671a1b69d58adfea0/pretor-widget-script.js" defer&gt;&lt;/script&gt;</code>
+                    <code>&lt;script src="https://www.pretor.ai/wp-content/widget-react-app/public_widget/pretor-widget-script.js" defer&gt;&lt;/script&gt;</code>
                     <button class="copy-button" onclick="copyToClipboard('script1')">Копіювати</button>
                 </div>
-                <li>Створіть блок з <code>id="pretor-widget"</code> та вкажіть розміри блока, де ви хочете, щоб з'явився віджет. Наприклад, ви можете використовувати CSS, щоб встановити висоту і ширину:</li>
+                <li>Створіть блок з <code>id="pretor-widget"</code>, де ви хочете, щоб з'явився віджет. Мінімальне місце для блоку: 400px у висоту та 250px у ширину. Код блоку:</li>
                 <div class="code-block" id="script2">
-                    <code>&lt;div id="pretor-widget" style="width: 300px; height: 400px;"&gt;&lt;/div&gt;</code>
+                    <code>&lt;div id="pretor-widget"&gt;&lt;/div&gt;</code>
                     <button class="copy-button" onclick="copyToClipboard('script2')">Копіювати</button>
                 </div>
             </ul>
@@ -133,7 +126,7 @@
             <ul>
                 <li>Вставте наступний скрипт у ваш HTML-документ у секцію <code>&lt;head&gt;</code> або перед закриваючим тегом <code>&lt;/body&gt;</code>:</li>
                 <div class="code-block" id="script3">
-                    <code>&lt;script src="https://raw.githubusercontent.com/A-Godgi/pretor-widget/c55869a73a3b08666120a67671a1b69d58adfea0/pretor-widget-script.js" is-popup="true" defer &gt;&lt;/script&gt;</code>
+                    <code>&lt;script src="https://www.pretor.ai/wp-content/widget-react-app/public_widget/pretor-widget-script.js" is-popup="true" defer &gt;&lt;/script&gt;</code>
                     <button class="copy-button" onclick="copyToClipboard('script3')">Копіювати</button>
                 </div>
                 <li>Створіть блок з <code>id="pretor-widget"</code> де ви хочете, щоб з'явилася кнопка, при натисканні якої відкриється модальне вікно з віджетом.</li>

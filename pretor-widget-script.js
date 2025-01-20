@@ -33,7 +33,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 5% 20%;
         z-index: 9999;
         overflow: hidden;
       }
@@ -95,8 +94,8 @@
             iframeDocument.head.appendChild(link);
         };
 
-        loadStyle('https://raw.githubusercontent.com/A-Godgi/pretor-widget/c55869a73a3b08666120a67671a1b69d58adfea0/widget/widget.css');
-        loadScript('https://raw.githubusercontent.com/A-Godgi/pretor-widget/c55869a73a3b08666120a67671a1b69d58adfea0/widget/widget.js')
+        loadStyle('https://www.pretor.ai/wp-content/widget-react-app/public_widget/widget.css');
+        loadScript('https://www.pretor.ai/wp-content/widget-react-app/public_widget/widget.js')
             .then(() => console.log('React app loaded successfully'))
             .catch((error) => console.error('Error loading React app:', error));
     };
@@ -114,8 +113,6 @@
         };
 
         const iframe = document.createElement('iframe');
-        iframe.style.width = '100%';
-        iframe.style.height = '100%';
         iframe.style.border = 'none';
 
         popup.appendChild(closeButton);
